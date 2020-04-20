@@ -1,11 +1,10 @@
 package com.gzmu.tcsys.user.controller;
 
-import com.gzmu.tcsys.user.bean.Member;
-import com.gzmu.tcsys.user.bean.MemberReceiveAddress;
-import com.gzmu.tcsys.user.service.UserService;
+import com.gzmu.tcsys.service.UserService;
+import com.gzmu.tcsys.bean.Member;
+import com.gzmu.tcsys.bean.MemberReceiveAddress;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 

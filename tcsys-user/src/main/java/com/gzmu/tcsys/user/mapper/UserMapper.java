@@ -1,7 +1,9 @@
 package com.gzmu.tcsys.user.mapper;
 
 
-import com.gzmu.tcsys.user.bean.Member;
+
+
+import com.gzmu.tcsys.bean.Member;
 import tk.mybatis.mapper.common.Mapper;
 
 import java.util.List;

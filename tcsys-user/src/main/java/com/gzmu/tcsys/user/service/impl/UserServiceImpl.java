@@ -1,10 +1,11 @@
 package com.gzmu.tcsys.user.service.impl;
 
-import com.gzmu.tcsys.user.bean.Member;
-import com.gzmu.tcsys.user.bean.MemberReceiveAddress;
+
+import com.gzmu.tcsys.bean.Member;
+import com.gzmu.tcsys.bean.MemberReceiveAddress;
+import com.gzmu.tcsys.service.UserService;
 import com.gzmu.tcsys.user.mapper.MemberReceiveAddressMapper;
 import com.gzmu.tcsys.user.mapper.UserMapper;
-import com.gzmu.tcsys.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import tk.mybatis.mapper.entity.Example;

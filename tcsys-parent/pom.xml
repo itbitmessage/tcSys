@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.21.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <groupId>com.gzmu.tcsys</groupId>
+    <artifactId>tcsys-parent</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <project.build.sourceEncoding>1.8</project.build.sourceEncoding>
+
+
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <fastjson.version>1.2.46</fastjson.version>
+        <dubbo-starter.version>1.0.10</dubbo-starter.version>
+        <dubbo.version>2.6.0</dubbo.version>
+        <zkclient.version>0.10</zkclient.version>
+        <mybatis.version>1.3.1</mybatis.version>
+        <nekohtml.version>1.9.20</nekohtml.version>
+        <xml-apis.version>1.4.01</xml-apis.version>
+        <batik-ext.version>1.9.1</batik-ext.version>
+        <jsoup.version>1.11.2</jsoup.version>
+        <httpclient.version>4.5.5</httpclient.version>
+        <commons-lang3.version>3.7</commons-lang3.version>
+        <mapper-starter.version>1.2.3</mapper-starter.version>
+        <jedis.version>2.9.0</jedis.version>
+        <jest.version>5.3.3</jest.version>
+        <jna.version>4.5.1</jna.version>
+        <beanUtils.version>1.9.3</beanUtils.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!--Fastjson 是一个 Java 库，可以将 Java 对象转换为 JSON 格式，当然它也可以将 JSON 字符串转换为 Java 对象。-->
+            <!--Fastjson 可以操作任何 Java 对象，即使是一些预先存在的没有源码的对象-->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>dubbo</artifactId>
+                <version>${dubbo.version}</version>
+            </dependency>
+
+            <!--zookeeper客服端-->
+            <dependency>
+                <groupId>com.101tec</groupId>
+                <artifactId>zkclient</artifactId>
+                <version>${zkclient.version}</version>
+            </dependency>
+
+            <!-- dubbo整合springboot中间包-->
+            <dependency>
+                <groupId>com.gitee.reger</groupId>
+                <artifactId>spring-boot-starter-dubbo</artifactId>
+                <version>${dubbo-starter.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis.version}</version>
+            </dependency>
+
+            <!--nekohtml xml-apis batik-ext组合 thymeleaf前端渲染框架-->
+            <dependency>
+                <groupId>net.sourceforge.nekohtml</groupId>
+                <artifactId>nekohtml</artifactId>
+                <version>${nekohtml.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>xml-apis</groupId>
+                <artifactId>xml-apis</artifactId>
+                <version>${xml-apis.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.xmlgraphics</groupId>
+                <artifactId>batik-ext</artifactId>
+                <version>${batik-ext.version}</version>
+            </dependency>
+
+            <!--jsoup 是一款Java 的HTML解析器，可直接解析某个URL地址、HTML文本内容。
+            它提供了一套非常省力的API，可通过DOM，CSS以及类似于jQuery的操作方法来取出和操作数据。-->
+            <!-- https://mvnrepository.com/artifact/org.jsoup/jsoup -->
+            <dependency>
+                <groupId>org.jsoup</groupId>
+                <artifactId>jsoup</artifactId>
+                <version>${jsoup.version}</version>
+            </dependency>
+
+            <!--HttpClient 是Apache Jakarta Common 下的子项目，可以用来提供高效的、最新的、-->
+            <!--功能丰富的支持 HTTP 协议的客户端编程工具包，并且它支持 HTTP 协议最新的版本和建议。-->
+            <!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpclient</artifactId>
+                <version>${httpclient.version}</version>
+            </dependency>
+
+            <!--apache提供的众多commons工具包-->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
+            </dependency>
+
+            <!--通用mapper整合springboot-->
+            <dependency>
+                <groupId>tk.mybatis</groupId>
+                <artifactId>mapper-spring-boot-starter</artifactId>
+                <version>${mapper-starter.version}</version>
+            </dependency>
+
+            <!--redis客户端-->
+            <dependency>
+                <groupId>redis.clients</groupId>
+                <artifactId>jedis</artifactId>
+                <version>${jedis.version}</version>
+            </dependency>
+
+            <!--jest jna elasticsearch-->
+            <!-- https://mvnrepository.com/artifact/io.searchbox/jest -->
+            <dependency>
+                <groupId>io.searchbox</groupId>
+                <artifactId>jest</artifactId>
+                <version>${jest.version}</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/net.java.dev.jna/jna -->
+            <dependency>
+                <groupId>net.java.dev.jna</groupId>
+                <artifactId>jna</artifactId>
+                <version>${jna.version}</version>
+            </dependency>
+
+            <!--Commons-beanutil中包括大量和JavaBean操作有关的工具方法，使用它能够轻松利用Java反射机制来
+            完毕代码中所须要的功能， 而不须要具体研究反射的原理和使用，同一时候，该类库中提出了动态Bean
+            的概念， 不但提供现有JavaBean的全部功能，并且还能够在执行时动态的对Bean中的属性数据类型进行
+            改动 以及增删属性。-->
+            <dependency>
+                <groupId>commons-beanutils</groupId>
+                <artifactId>commons-beanutils</artifactId>
+                <version>${beanUtils.version}</version>
+            </dependency>
+
+
+        </dependencies>
+    </dependencyManagement>
+
+</project>

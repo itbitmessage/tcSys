@@ -1,4 +1,4 @@
-package com.gzmu.tcsys.user.bean;
+package com.gzmu.tcsys.bean;
 
 import javax.persistence.Id;
 

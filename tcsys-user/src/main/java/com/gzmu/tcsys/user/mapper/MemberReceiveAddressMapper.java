@@ -1,6 +1,7 @@
 package com.gzmu.tcsys.user.mapper;
 
-import com.gzmu.tcsys.user.bean.MemberReceiveAddress;
+
+import com.gzmu.tcsys.bean.MemberReceiveAddress;
 import tk.mybatis.mapper.common.Mapper;
 
 /**

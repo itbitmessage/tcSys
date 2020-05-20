@@ -1,10 +1,10 @@
 package com.gzmu.tcsys.service;
 
 import com.gzmu.tcsys.bean.Member;
-import com.gzmu.tcsys.bean.MemberReceiveAddress;
+import com.gzmu.tcsys.vo.TcsysMemberVO;
+import java.util.Date;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 
 /**
  * @author weicaiwang
@@ -12,8 +12,36 @@ import java.util.List;
 @Service
 public interface UserService {
 
+    /**
+     * 会员查询
+     * @param member
+     * @param pageNum
+     * @param pageSize
+     * @param startTime
+     * @param endTime
+     * @return
+     */
+    TcsysMemberVO getMember(Member member, Integer pageNum, Integer pageSize,String startTime,String endTime);
 
-    List<Member> getAllUser();
+    /**
+     * 增加member
+     * @param member
+     * @return
+     */
+    Boolean add(Member member);
 
-    List<MemberReceiveAddress> getReceiveAddressByMemberId(String memberId);
+    /**
+     * 根据id删除Member
+     * @param id
+     * @return
+     */
+    Boolean deleteMember(String id);
+
+    /**
+     * 修改member信息
+     * @param member
+     * @return
+     */
+    Boolean update(Member member);
+
 }

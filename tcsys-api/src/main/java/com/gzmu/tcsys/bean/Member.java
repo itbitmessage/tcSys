@@ -1,19 +1,25 @@
 package com.gzmu.tcsys.bean;
 
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * @author weicaiwang
  */
-
-public class Member {
+@Table(name = "member")
+public class Member implements Serializable {
 
 
   /**
+   * 会员表
+   *
     主键返回策略
    */
   @Id
@@ -24,16 +30,18 @@ public class Member {
   private String  password;
   private String  nickname;
   private String  phone;
-  private int  status;
+  private Integer  status;
     /**
      *   注册时间
      */
+  @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
   private Date createTime;
   /**
    * 头像
    */
   private String  icon;
-  private int  gender;
+  private Integer  gender;
+  @DateTimeFormat(pattern = "yyyy-MM-dd")
   private Date  birthday;
   private String  city;
     /**
@@ -43,20 +51,19 @@ public class Member {
     /**
      * 积分
      */
-  private int  integration;
+  private Integer  integration;
     /**
      * 成长值
      */
-  private int  growth;
+  private Integer  growth;
     /**
      * 剩余抽奖次数
      */
-  private int  luckeyCount;
+  private Integer  luckeyCount;
     /**
      * 历史积分数量
      */
-  private int  historyIntegration;
-
+  private Integer  historyIntegration;
 
     public String getId() {
         return id;
@@ -106,11 +113,11 @@ public class Member {
         this.phone = phone;
     }
 
-    public int getStatus() {
+    public Integer getStatus() {
         return status;
     }
 
-    public void setStatus(int status) {
+    public void setStatus(Integer status) {
         this.status = status;
     }
 
@@ -130,11 +137,11 @@ public class Member {
         this.icon = icon;
     }
 
-    public int getGender() {
+    public Integer getGender() {
         return gender;
     }
 
-    public void setGender(int gender) {
+    public void setGender(Integer gender) {
         this.gender = gender;
     }
 
@@ -162,35 +169,35 @@ public class Member {
         this.personalizedSignature = personalizedSignature;
     }
 
-    public int getIntegration() {
+    public Integer getIntegration() {
         return integration;
     }
 
-    public void setIntegration(int integration) {
+    public void setIntegration(Integer integration) {
         this.integration = integration;
     }
 
-    public int getGrowth() {
+    public Integer getGrowth() {
         return growth;
     }
 
-    public void setGrowth(int growth) {
+    public void setGrowth(Integer growth) {
         this.growth = growth;
     }
 
-    public int getLuckeyCount() {
+    public Integer getLuckeyCount() {
         return luckeyCount;
     }
 
-    public void setLuckeyCount(int luckeyCount) {
+    public void setLuckeyCount(Integer luckeyCount) {
         this.luckeyCount = luckeyCount;
     }
 
-    public int getHistoryIntegration() {
+    public Integer getHistoryIntegration() {
         return historyIntegration;
     }
 
-    public void setHistoryIntegration(int historyIntegration) {
+    public void setHistoryIntegration(Integer historyIntegration) {
         this.historyIntegration = historyIntegration;
     }
 }

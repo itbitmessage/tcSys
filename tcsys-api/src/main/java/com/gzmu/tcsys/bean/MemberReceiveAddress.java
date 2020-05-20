@@ -1,11 +1,14 @@
 package com.gzmu.tcsys.bean;
 
 import javax.persistence.Id;
+import java.io.Serializable;
 
 /**
+ * 会员收货地址
+ *
  * @author weicaiwang
  */
-public class MemberReceiveAddress {
+public class MemberReceiveAddress implements Serializable {
 
     @Id
     private String id;
